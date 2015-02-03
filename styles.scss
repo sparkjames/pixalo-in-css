@@ -1,0 +1,316 @@
+/*
+Inspiration from https://www.codeschool.com/blog/2014/06/24/designing-characters-with-box-shadow/
+*/
+
+@import url('animate.css');
+
+$pixalo_color: rgba(24,202,232,1);
+	$pixalo_shadow_1: rgba(24,202,232,.35);
+	$pixalo_shadow_2: rgba(24,202,232,.30);
+	$pixalo_shadow_3: rgba(24,202,232,.25);
+	$pixalo_shadow_4: rgba(24,202,232,.20);
+	$pixalo_shadow_5: rgba(24,202,232,.15);
+	$pixalo_shadow_6: rgba(24,202,232,.10);
+	$pixalo_shadow_7: rgba(24,202,232,.05);
+$eyes: rgb(0,0,0);
+$hair: rgb(0,0,0);
+$teeth: rgb(255,255,255);
+
+
+body {
+	font-size: 14px;
+	background-color: #000;
+}
+
+
+.wrapper {
+	padding: 10em;
+}
+
+
+#pixalo {
+	background-color: transparent;
+	width: 1em;
+	height: 1em;
+	margin: 0 50% 0 calc(50% - 8em);
+	position: relative;
+	-webkit-transform-origin: 8em 8em !important;
+    -ms-transform-origin: 8em 8em !important;
+	transform-origin: 8em 8em !important;
+	
+	/* Using a 16x16 (well, 16x15) and defining colors by "lines" and "columns". */
+	box-shadow:	//%%%%%% L I N E   0 %%%%%%%
+				// Top left corner (column 1) is blank 
+				1em 0 $pixalo_shadow_7,
+				2em 0 $pixalo_shadow_6,
+				3em 0 $pixalo_shadow_5,
+				4em 0 $pixalo_shadow_5,
+				5em 0 $pixalo_shadow_5,
+				6em 0 $pixalo_shadow_5,
+				7em 0 $pixalo_shadow_5,
+				8em 0 $pixalo_shadow_5,
+				9em 0 $pixalo_shadow_5,
+				10em 0 $pixalo_shadow_5,
+				11em 0 $pixalo_shadow_5,
+				12em 0 $pixalo_shadow_5,
+				13em 0 $pixalo_shadow_6,
+				14em 0 $pixalo_shadow_7,
+				// Top right corner (column 16) is blank
+				//%%%%%% L I N E   1 %%%%%%%
+				0 1em $pixalo_shadow_7,
+				1em 1em $pixalo_shadow_6,
+				2em 1em $pixalo_shadow_5,
+				3em 1em $pixalo_shadow_4,
+				4em 1em $pixalo_shadow_4,
+				5em 1em $pixalo_shadow_4,
+				6em 1em $pixalo_shadow_4,
+				7em 1em $pixalo_shadow_4,
+				8em 1em $pixalo_shadow_4,
+				9em 1em $pixalo_shadow_4,
+				10em 1em $pixalo_shadow_4,
+				11em 1em $pixalo_shadow_4,
+				12em 1em $pixalo_shadow_4,
+				13em 1em $pixalo_shadow_5,
+				14em 1em $pixalo_shadow_6,
+				15em 1em $pixalo_shadow_7,
+				//%%%%%% L I N E   2 %%%%%%%
+				0 2em $pixalo_shadow_6,
+				1em 2em $pixalo_shadow_3,
+				2em 2em $pixalo_shadow_1,
+				3em 2em $pixalo_color,
+				4em 2em $pixalo_color,
+				5em 2em $pixalo_color,
+				6em 2em $pixalo_color,
+				7em 2em $pixalo_color,
+				8em 2em $pixalo_color,
+				9em 2em $pixalo_color,
+				10em 2em $pixalo_color,
+				11em 2em $pixalo_color,
+				12em 2em $pixalo_color,
+				13em 2em $pixalo_shadow_1,
+				14em 2em $pixalo_shadow_3,
+				15em 2em $pixalo_shadow_6,
+				//%%%%%% L I N E   3 %%%%%%%
+				0 3em $pixalo_shadow_5,
+				1em 3em $pixalo_shadow_2,
+				2em 3em $pixalo_color,
+				3em 3em $pixalo_color,
+				4em 3em $pixalo_color,
+				5em 3em $pixalo_color,
+				6em 3em $pixalo_color,
+				7em 3em $pixalo_color,
+				8em 3em $pixalo_color,
+				9em 3em $pixalo_color,
+				10em 3em $pixalo_color,
+				11em 3em $pixalo_color,
+				12em 3em $pixalo_color,
+				13em 3em $pixalo_color,
+				14em 3em $pixalo_shadow_2,
+				15em 3em $pixalo_shadow_5,
+				//%%%%%% L I N E   4 %%%%%%%
+				0 4em $pixalo_shadow_5,
+				1em 4em $pixalo_shadow_2,
+				2em 4em $pixalo_color,
+				3em 4em $pixalo_color,
+				4em 4em #fff,
+				5em 4em $eyes,
+				6em 4em $pixalo_color,
+				7em 4em $pixalo_color,
+				8em 4em $pixalo_color,
+				9em 4em $pixalo_color,
+				10em 4em #fff,
+				11em 4em $eyes,
+				12em 4em $pixalo_color,
+				13em 4em $pixalo_color,
+				14em 4em $pixalo_shadow_2,
+				15em 4em $pixalo_shadow_5,
+				//%%%%%% L I N E   5 %%%%%%%
+				0 5em $pixalo_shadow_5,
+				1em 5em $pixalo_shadow_2,
+				2em 5em $pixalo_color,
+				3em 5em $pixalo_color,
+				4em 5em $eyes,
+				5em 5em $eyes,
+				6em 5em $pixalo_color,
+				7em 5em $pixalo_color,
+				8em 5em $pixalo_color,
+				9em 5em $pixalo_color,
+				10em 5em $eyes,
+				11em 5em $eyes,
+				12em 5em $pixalo_color,
+				13em 5em $pixalo_color,
+				14em 5em $pixalo_shadow_2,
+				15em 5em $pixalo_shadow_5,
+				//%%%%%% L I N E   6 %%%%%%%
+				0 6em $pixalo_shadow_5,
+				1em 6em $pixalo_shadow_2,
+				2em 6em $pixalo_color,
+				3em 6em $pixalo_color,
+				4em 6em $pixalo_color,
+				5em 6em $pixalo_color,
+				6em 6em $pixalo_color,
+				7em 6em $pixalo_color,
+				8em 6em $pixalo_color,
+				9em 6em $pixalo_color,
+				10em 6em $pixalo_color,
+				11em 6em $pixalo_color,
+				12em 6em $pixalo_color,
+				13em 6em $pixalo_color,
+				14em 6em $pixalo_shadow_2,
+				15em 6em $pixalo_shadow_5,
+				//%%%%%% L I N E   7 %%%%%%%
+				0 7em $pixalo_shadow_5,
+				1em 7em $pixalo_shadow_2,
+				2em 7em $pixalo_color,
+				3em 7em $pixalo_color,
+				4em 7em $pixalo_color,
+				5em 7em $pixalo_color,
+				6em 7em $pixalo_color,
+				7em 7em $pixalo_color,
+				8em 7em $pixalo_color,
+				9em 7em $pixalo_color,
+				10em 7em $pixalo_color,
+				11em 7em $pixalo_color,
+				12em 7em $pixalo_color,
+				13em 7em $pixalo_color,
+				14em 7em $pixalo_shadow_2,
+				15em 7em $pixalo_shadow_5,
+				//%%%%%% L I N E   8 %%%%%%%
+				0 8em $pixalo_shadow_5,
+				1em 8em $pixalo_shadow_2,
+				2em 8em $pixalo_color,
+				3em 8em $pixalo_color,
+				4em 8em $hair,
+				5em 8em $hair,
+				6em 8em $hair,
+				7em 8em $pixalo_color,
+				8em 8em $pixalo_color,
+				9em 8em $hair,
+				10em 8em $hair,
+				11em 8em $hair,
+				12em 8em $pixalo_color,
+				13em 8em $pixalo_color,
+				14em 8em $pixalo_shadow_2,
+				15em 8em $pixalo_shadow_5,
+				//%%%%%% L I N E   9 %%%%%%%
+				0 9em $pixalo_shadow_5,
+				1em 9em $pixalo_shadow_2,
+				2em 9em $pixalo_color,
+				3em 9em $pixalo_color,
+				4em 9em $teeth,
+				5em 9em $teeth,
+				6em 9em $teeth,
+				7em 9em $teeth,
+				8em 9em $teeth,
+				9em 9em $teeth,
+				10em 9em $teeth,
+				11em 9em $teeth,
+				12em 9em $pixalo_color,
+				13em 9em $pixalo_color,
+				14em 9em $pixalo_shadow_2,
+				15em 9em $pixalo_shadow_5,
+				//%%%%%% L I N E   10 %%%%%%%
+				0 10em $pixalo_shadow_5,
+				1em 10em $pixalo_shadow_2,
+				2em 10em $pixalo_color,
+				3em 10em $pixalo_color,
+				4em 10em $pixalo_color,
+				5em 10em $teeth,
+				6em 10em $teeth,
+				7em 10em $teeth,
+				8em 10em $teeth,
+				9em 10em $teeth,
+				10em 10em $teeth,
+				11em 10em $pixalo_color,
+				12em 10em $pixalo_color,
+				13em 10em $pixalo_color,
+				14em 10em $pixalo_shadow_2,
+				15em 10em $pixalo_shadow_5,
+				//%%%%%% L I N E   11 %%%%%%%
+				0 11em $pixalo_shadow_5,
+				1em 11em $pixalo_shadow_2,
+				2em 11em $pixalo_color,
+				3em 11em $pixalo_color,
+				4em 11em $pixalo_color,
+				5em 11em $pixalo_color,
+				6em 11em $pixalo_color,
+				7em 11em $hair,
+				8em 11em $hair,
+				9em 11em $pixalo_color,
+				10em 11em $pixalo_color,
+				11em 11em $pixalo_color,
+				12em 11em $pixalo_color,
+				13em 11em $pixalo_color,
+				14em 11em $pixalo_shadow_2,
+				15em 11em $pixalo_shadow_5,
+				//%%%%%% L I N E   12 %%%%%%%
+				0 12em $pixalo_shadow_5,
+				1em 12em $pixalo_shadow_2,
+				2em 12em $pixalo_color,
+				3em 12em $pixalo_color,
+				4em 12em $pixalo_color,
+				5em 12em $pixalo_color,
+				6em 12em $pixalo_color,
+				7em 12em $pixalo_color,
+				8em 12em $pixalo_color,
+				9em 12em $pixalo_color,
+				10em 12em $pixalo_color,
+				11em 12em $pixalo_color,
+				12em 12em $pixalo_color,
+				13em 12em $pixalo_color,
+				14em 12em $pixalo_shadow_2,
+				15em 12em $pixalo_shadow_5,
+				//%%%%%% L I N E   13 %%%%%%%
+				0 13em $pixalo_shadow_6,
+				1em 13em $pixalo_shadow_3,
+				2em 13em $pixalo_shadow_1,
+				3em 13em $pixalo_color,
+				4em 13em $pixalo_color,
+				5em 13em $pixalo_color,
+				6em 13em $pixalo_color,
+				7em 13em $pixalo_color,
+				8em 13em $pixalo_color,
+				9em 13em $pixalo_color,
+				10em 13em $pixalo_color,
+				11em 13em $pixalo_color,
+				12em 13em $pixalo_color,
+				13em 13em $pixalo_shadow_1,
+				14em 13em $pixalo_shadow_3,
+				15em 13em $pixalo_shadow_6,
+				//%%%%%% L I N E   14 %%%%%%%
+				0 14em $pixalo_shadow_7,
+				1em 14em $pixalo_shadow_6,
+				2em 14em $pixalo_shadow_5,
+				3em 14em $pixalo_shadow_4,
+				4em 14em $pixalo_shadow_4,
+				5em 14em $pixalo_shadow_4,
+				6em 14em $pixalo_shadow_4,
+				7em 14em $pixalo_shadow_4,
+				8em 14em $pixalo_shadow_4,
+				9em 14em $pixalo_shadow_4,
+				10em 14em $pixalo_shadow_4,
+				11em 14em $pixalo_shadow_4,
+				12em 14em $pixalo_shadow_4,
+				13em 14em $pixalo_shadow_5,
+				14em 14em $pixalo_shadow_6,
+				15em 14em $pixalo_shadow_7
+				/*//%%%%%% L I N E   15 %%%%%%%
+				// Bottom left corner is blank 
+				1em 15em $pixalo_shadow_7,
+				2em 15em $pixalo_shadow_6,
+				3em 15em $pixalo_shadow_5,
+				4em 15em $pixalo_shadow_5,
+				5em 15em $pixalo_shadow_5,
+				6em 15em $pixalo_shadow_5,
+				7em 15em $pixalo_shadow_5,
+				8em 15em $pixalo_shadow_5,
+				9em 15em $pixalo_shadow_5,
+				10em 15em $pixalo_shadow_5,
+				11em 15em $pixalo_shadow_5,
+				12em 15em $pixalo_shadow_5,
+				13em 15em $pixalo_shadow_6,
+				14em 15em $pixalo_shadow_7
+				// Bottom right corner is blank
+				*/
+				;
+}
